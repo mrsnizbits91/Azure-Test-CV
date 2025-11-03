@@ -1,0 +1,49 @@
+npm install @azure/cosmos
+
+
+const { CosmosClient } = require("@azure/cosmos"); 
+
+const endpoint = process.env.COSMOS_ENDPOINT;
+const key = process.env.COSMOS_KEY;
+
+if (!endpoint || !key) {
+  throw new Error("COSMOS_ENDPOINT or COSMOS_KEY is not set correctly in the environment variables.");
+}
+
+const client = new CosmosClient({ endpoint, key });
+const databaseName = "Counter";
+const containerName = "Visitors";
+
+module.exports = async function (context, req) {
+  context.log("JavaScript HTTP trigger function processed a request.");
+
+  const documentId = "1"; // Define the document ID for visitor count
+  try {
+    const { resource: item } = await client
+      .database(databaseName)
+      .container(containerName)
+      .item(documentId, documentId)
+      .read();
+    const currentCount = item.count || 0;
+
+    item.count = currentCount + 1;
+
+    await client
+      .database(databaseName)
+      .container(containerName)
+      .items.upsert(item);
+
+    context.log(`Visitor count updated from ${currentCount} to ${item.count}`);
+
+    context.res = {
+      status: 200,
+      body: `Visitor count updated to: ${item.count}`,
+    };
+  } catch (error) {
+    context.log(`Error updating visitor count: ${error.message}`);
+    context.res = {
+      status: 500,
+      body: "An error occurred while updating the visitor count.",
+    };
+  }
+};
