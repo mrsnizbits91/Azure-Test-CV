@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   getVisitCount();
 });
 
-const functionApi = "";
+const functionApi = "count-mario-resume-plus-one-e0byhvawgng4f2ek.centralus-01.azurewebsites.net/api/plus-one?code=6KBN5DJxaAgVRt_NRPXz_FoUbdtMd91-qzVPKXD1sz2fAzFunBiFTA==";
 
 const getVisitCount = () => {
   fetch(functionApi)
