@@ -187,12 +187,13 @@
           Let’s collaborate on Azure, Dynamics 365, or cloud automation projects — feel free to reach out!
         </p>
 
-        <<form
-        id="contact-form"
-        method="POST"
-        action="https://count-mario-resume-plus-one.azurewebsites.net/api/contact"
-         style="margin: 0 auto; max-width: 600px;"
->
+        <!-- ✅ Fixed contact form syntax -->
+        <form
+          id="contact-form"
+          method="POST"
+          action="https://count-mario-resume-plus-one.azurewebsites.net/api/contact"
+          style="margin: 0 auto; max-width: 600px;"
+        >
           <fieldset>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
@@ -235,11 +236,6 @@
     <script src="js/jquery.fittext.js"></script>
     <script src="js/magnific-popup.js"></script>
     <script src="js/init.js"></script>
-
-    <!-- 👇 Move main.js to the end so it runs after DOM loads -->
-    <script src="main.js"></script>
-
-        <script src="js/init.js"></script>
     <script src="main.js"></script>
 
     <!-- 👇 Contact Form Submission Script -->
@@ -276,8 +272,5 @@
         }
       });
     </script>
-  </body>
-</html>
-
   </body>
 </html>
