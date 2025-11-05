@@ -238,5 +238,46 @@
 
     <!-- 👇 Move main.js to the end so it runs after DOM loads -->
     <script src="main.js"></script>
+
+        <script src="js/init.js"></script>
+    <script src="main.js"></script>
+
+    <!-- 👇 Contact Form Submission Script -->
+    <script>
+      document.getElementById("contact-form").addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = {
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value
+        };
+
+        const status = document.getElementById("form-status");
+        status.textContent = "Sending...";
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+          });
+
+          const result = await response.json();
+          if (result.success) {
+            status.textContent = "✅ Message sent successfully!";
+            form.reset();
+          } else {
+            status.textContent = "❌ Error: " + (result.error || "Something went wrong.");
+          }
+        } catch (err) {
+          status.textContent = "❌ Failed to send message: " + err.message;
+        }
+      });
+    </script>
+  </body>
+</html>
+
   </body>
 </html>
