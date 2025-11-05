@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   counterEl.textContent = localStorage.getItem("visitCount") || "Loading...";
 
   // Your Azure Function endpoint
-  const functionApi = "https://count-mario-resume-plus-one-e0byhwawgnq4f2ek.centralus-01.azurewebsites.net/api/plus-one";
+const functionApi = "https://count-mario-resume-plus-one-e0byhwawgnq4f2ek.azurewebsites.net/api/plus-one";
 
 
 
