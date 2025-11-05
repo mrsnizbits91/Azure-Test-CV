@@ -18,7 +18,6 @@
 
     <!-- Scripts -->
     <script src="js/modernizr.js"></script>
-    <script src="main.js"></script>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" />
@@ -89,6 +88,11 @@
             Certified in <strong>Azure Administrator</strong>,
             <strong>AWS Cloud Practitioner</strong>, and full
             <strong>CompTIA Stack (A+, N+, S+, Project+)</strong>
+          </p>
+
+          <!-- 👁️ Visitor Counter Added Here -->
+          <p style="color: #aaa;">
+            👁️ Visitor Count: <span id="counter">Loading...</span>
           </p>
 
           <ul class="social">
@@ -171,124 +175,11 @@
               🔗 View on GitHub
             </a>
           </div>
-
-          <br /><br />
-
-          <!-- Plex Project -->
-          <div class="twelve columns">
-            <h3>Personal Home Media Server – Plex & TrueNAS</h3>
-            <p>
-              Designed and managed a self-hosted <strong>Plex Media Server</strong> ecosystem using 
-              <strong>TrueNAS SCALE</strong> as the backbone for network-attached storage and Docker containers 
-              for media automation and orchestration. 
-              Implemented secure <strong>file sharing</strong> and <strong>access control</strong> for local and remote users, 
-              integrating SMB and NFS shares across multiple devices with enforced user authentication. 
-              Configured a <strong>reverse proxy</strong> with <strong>SSL/TLS certificates</strong> and automated DNS updates through 
-              <strong>Cloudflare</strong> for secure external access.
-            </p>
-            <ul>
-              <li>✅ Configured <strong>ZFS storage pools</strong>, SMART monitoring, and RAID redundancy</li>
-              <li>✅ Deployed <strong>Plex, Sonarr, Radarr, Lidarr, SABnzbd, and NZBHydra2</strong> using Docker containers</li>
-              <li>✅ Implemented <strong>reverse proxy</strong> via NGINX/Traefik for secure HTTPS access and load routing</li>
-              <li>✅ Automated <strong>Cloudflare DNS</strong> updates for dynamic IP management and SSL renewal</li>
-              <li>✅ Managed <strong>file shares and user permissions</strong> via TrueNAS SMB/NFS for controlled access</li>
-              <li>✅ Troubleshot <strong>network routing, share access, and container connectivity</strong> for reliability and uptime</li>
-            </ul>
-            <p>
-              <em>Result:</em> A fully automated and secure home lab environment featuring centralized media access, 
-              reverse proxy security, and role-based file sharing — demonstrating real-world expertise in 
-              storage management, networking, and infrastructure troubleshooting.
-            </p>
-          </div>
-
-          <br /><br />
-
-          <!-- D365 CE Project -->
-          <div class="twelve columns">
-            <h3>D365 CE Environment Sync Automation</h3>
-            <p>
-              Automated refresh process for a read-only Dynamics 365 CE training environment using
-              <strong>Azure Logic Apps</strong> and <strong>PowerShell</strong> scripts to maintain
-              data consistency with F&O.
-            </p>
-            <ul>
-              <li>✅ Automated environment refresh workflow</li>
-              <li>✅ Integrated Logic App triggers and runbooks</li>
-              <li>✅ Improved sync reliability and reduced manual steps</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- Resume -->
-    <section id="resume">
-      <div class="row education">
-        <div class="three columns header-col">
-          <h1><span>Certifications</span></h1>
-        </div>
-        <div class="nine columns main-col">
-          <ul>
-            <li>✅ Microsoft Certified: Azure Administrator Associate (Issued Jun 2023 – Expires Jun 2025)</li>
-            <li>✅ Microsoft Certified: Azure Fundamentals (Issued Nov 2022)</li>
-            <li>✅ AWS Certified Cloud Practitioner (Issued Aug 2024 – Expires Aug 2027)</li>
-            <li>✅ CompTIA Security+ ce Certification (Issued Feb 2023 – Expires Feb 2026)</li>
-            <li>✅ CompTIA Network+ ce Certification (Issued Sep 2022 – Expires Sep 2025)</li>
-            <li>✅ CompTIA A+ ce Certification (Issued Dec 2022 – Expires Dec 2025)</li>
-            <li>✅ CompTIA Project+ Certification (Issued Aug 2024)</li>
-            <li>✅ CompTIA IT Operations Specialist – CIOS Stackable Certification (Issued Dec 2022 – Expires Sep 2025)</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row work">
-        <div class="three columns header-col">
-          <h1><span>Experience</span></h1>
-        </div>
-        <div class="nine columns main-col">
-          <h3>Cleveland Brothers Equipment Co.</h3>
-          <p class="info">
-            Microsoft Dynamics System Administrator
-            <span>&bull;</span> <em class="date">Jun 2024 – Present</em>
-          </p>
-          <ul>
-            <li>Administer Dynamics 365 CE and F&O roles, permissions, and environment access</li>
-            <li>Manage Azure AD groups, Conditional Access, and PIM configurations</li>
-            <li>Coordinate with developers and partners for environment refreshes and integrations</li>
-          </ul>
-
-          <h3>Mural Corporation</h3>
-          <p class="info">
-            Microsoft Business Advisor <span>&bull;</span>
-            <em class="date">Jan 2024 – Jun 2024</em>
-          </p>
-          <ul>
-            <li>Provided Azure and M365 solutions consultation to business clients</li>
-            <li>Developed internal best practices for cloud adoption and security</li>
-          </ul>
-
-          <h3>NET Xperts LLC</h3>
-          <p class="info">
-            Cloud Administrator <span>&bull;</span> <em class="date">Oct 2022 – Jan 2024</em>
-          </p>
-          <ul>
-            <li>Configured and managed hybrid cloud infrastructure and VPNs</li>
-            <li>Utilized SolarWinds and remote monitoring tools for proactive system management</li>
-            <li>Supported NOC operations and customer infrastructure remotely</li>
-          </ul>
-
-          <p class="info">
-            Jr. NOC Technician <span>&bull;</span> <em class="date">Apr 2022 – Oct 2022</em>
-          </p>
-          <ul>
-            <li>Monitored system alerts, ticket queues, and client servers for uptime</li>
-            <li>Assisted in troubleshooting network connectivity and performance issues</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact with Azure Function backend -->
+    <!-- Contact -->
     <section id="contact">
       <div class="row">
         <h1>Contact Me</h1>
@@ -318,41 +209,6 @@
 
         <div id="form-status" style="margin-top: 10px; color: #00b300;"></div>
       </div>
-
-      <script>
-        document.getElementById("contact-form").addEventListener("submit", async function (event) {
-          event.preventDefault();
-          const form = event.target;
-          const formData = {
-            name: form.name.value,
-            email: form.email.value,
-            message: form.message.value
-          };
-
-          const status = document.getElementById("form-status");
-          status.textContent = "Sending...";
-
-          try {
-            const response = await fetch(form.action, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(formData)
-            });
-
-            const result = await response.json();
-            if (result.success) {
-              status.textContent = "✅ Message sent successfully!";
-              form.reset();
-            } else {
-              status.textContent = "❌ Error: " + (result.error || "Something went wrong.");
-            }
-          } catch (err) {
-            status.textContent = "❌ Failed to send message: " + err.message;
-          }
-        });
-      </script>www.linkedin.com/in/mario-lopez-71a888238
-
-
     </section>
 
     <footer>
@@ -360,9 +216,7 @@
         <div class="twelve columns">
           <ul class="social-links">
             <li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="www.linkedin.com/in/mario-lopez-71a888238
-
-"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://linkedin.com/in/mario-lopez-71a888238"><i class="fa fa-linkedin"></i></a></li>
             <li><a href="https://github.com"><i class="fa fa-github"></i></a></li>
           </ul>
           <p style="color: #777;">Template by CeeVee • Updated by Mario Lopez</p>
@@ -371,10 +225,9 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
-      window.jQuery ||
-        document.write('<script src="js/jquery-1.10.2.min.js"><\\/script>');
+      window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\\/script>');
     </script>
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/jquery.flexslider.js"></script>
@@ -382,5 +235,8 @@
     <script src="js/jquery.fittext.js"></script>
     <script src="js/magnific-popup.js"></script>
     <script src="js/init.js"></script>
+
+    <!-- 👇 Move main.js to the end so it runs after DOM loads -->
+    <script src="main.js"></script>
   </body>
 </html>
