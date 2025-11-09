@@ -1,0 +1,11 @@
+{
+  "name": "azure-cv-functions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": { "start": "func start" },
+  "dependencies": {
+    "@azure/identity": "^4.5.0",
+    "@microsoft/microsoft-graph-client": "^3.0.0",
+    "isomorphic-fetch": "^3.0.0"
+  }
+}
